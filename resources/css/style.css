@@ -210,36 +210,36 @@ body {
 @media (max-width: 768px) {
     /* Adjust padding and max-width for text containers */
     .project-description, .project-skills, .about-container {
-        padding: 0 40px;
-        max-width: 80%;
+        padding: 0 20px;
+        max-width: 90%;
     }
 
     /* Smaller font sizes for mobile */
     body {
-        font-size: 16px; /* Smaller base font size for mobile */
+        font-size: 14px; /* Reduced from 16px */
     }
 
     .header--main {
-        font-size: 40px; /* Smaller font size for main header on mobile */
+        font-size: 36px; /* Reduced from 40px */
     }
 
     .header--secondary {
-        font-size: 20px; /* Smaller font size for secondary header on mobile */
+        font-size: 18px; /* Reduced from 20px */
     }
 
     .header--project {
-        font-size: 24px; /* Smaller font size for project header on mobile */
+        font-size: 22px; /* Reduced from 24px */
     }
 
     .header--project--secondary {
-        font-size: 14px; /* Smaller font size for project subheader on mobile */
+        font-size: 13px; /* Reduced from 14px */
     }
 
     .project-description, .project-skills, .about-container {
-        font-size: 16px; /* Smaller font size for text containers on mobile */
+        font-size: 14px; /* Reduced from 16px */
     }
 
     .quote {
-        font-size: 14px; /* Smaller font size for quotes on mobile */
+        font-size: 12px; /* Reduced from 14px */
     }
 }
