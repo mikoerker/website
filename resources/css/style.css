@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
-/* General Styles */
 body {
     background-color: #e9f4fc;
     text-align: center;
@@ -13,100 +12,211 @@ body {
     padding: 0;
 }
 
-/* Responsive Fixes */
-.container {
-    max-width: 90%; /* Prevents text from touching screen edges */
-    margin: auto;
-    padding: 0 15px;
+/* HEADINGS */
+
+.header--main {
+    font-weight: bold;
+    font-size: 50px;
+    color: black;
+    margin-top: 150px;
+    margin-bottom: 5px;
+    line-height: 1.2;
 }
 
-.about-container, .project-description, .project-skills {
-    width: 90%; /* Makes it more responsive */
-    max-width: 600px; /* Keeps a readable line length */
-    margin: 20px auto; /* Centering and spacing */
-    font-size: 18px;
-    line-height: 1.5;
-    text-align: justify;
+.header--secondary {
+    font-weight: normal;
+    font-size: 25px;
+    color: grey;
+    margin-top: -5px;
+    line-height: 1.2;
 }
 
-.header--main, .header--project {
-    font-size: 36px; /* Adjusted for mobile */
-    margin-top: 80px;
-    padding: 0 10px;
+.header--project {
+    font-weight: bold;
+    font-size: 30px;
+    color: black;
+    margin-top: 150px;
+    margin-bottom: 5px;
+    line-height: 1.2;
+    text-align: center; /* Ensures it's centered */
+    max-width: 50vw; /* Matches the width of the divider */
+    max-width: 500px; /* Prevents excessive stretching */
+    word-wrap: break-word; /* Allows breaking at appropriate points */
+    overflow-wrap: break-word; /* Ensures long words break correctly */
+    margin-left: auto;
+    margin-right: auto; /* Centers within the container */
 }
 
-.header--secondary, .header--project--secondary {
-    font-size: 18px;
-    padding: 0 10px;
+.header--project--secondary {
+    font-weight: normal;
+    font-size: 15px;
+    color: grey;
+    margin-top: 0px;
+    margin-bottom: 60px;
+    line-height: 1.2;
 }
 
-/* Navbar Adjustments */
+/* NAVBAR */
+
 .navbar {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    padding: 10px;
+    gap: 20px; /* Space between links */
+    padding: 10px 20px; /* Space around links */
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
+/* Navbar Links */
 .navbar a {
-    font-size: 16px; /* Smaller text for mobile */
-    padding: 5px 10px;
+    text-decoration: none; /* Remove default underline */
+    color: black;
+    font-size: 18px;
+    margin-top: 15px;
+    margin-left: 10px;
+    font-weight: bolder;
+    position: relative; /* Needed for custom underline */
+    transition: color 0.3s ease;
 }
 
-/* Button Styling */
+/* Custom Underline Effect */
+.navbar a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px; /* Moves underline 3px below the text */
+    width: 100%;
+    height: 2px; /* Thickness of the underline */
+    background-color: #007BFF; /* Underline color */
+    transform: scaleX(0); /* Initially hidden */
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effect */
+.navbar a:hover {
+    color: #007BFF; /* Blue text on hover */
+}
+
+.navbar a:hover::after {
+    transform: scaleX(1); /* Expands underline */
+}
+
+
+/* CV BUTTON */ 
+
 .cv-btn {
-    padding: 12px 25px;
-    font-size: 14px;
-    margin-bottom: 80px;
+    appearance: none; /* Removes default button styles */
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    border-radius: 30px;
+    margin-top: -5px;
+    margin-bottom: 110px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
 }
 
-/* Divider for consistency */
+.cv-btn:focus {
+    outline: none;
+}
+
+/* DIVIDER */
+
 .divider {
-    width: 80vw;
-    max-width: 600px;
+    border: none;
+    height: 2px;
+    background-color: rgba(128, 128, 128, 0.3);
+    margin: 20px auto;
+    width: 60vw; /* Matches project section width */
+    max-width: 800px; /* Prevents excessive stretching on large screens */
 }
 
-/* Project Section */
+/* Project Name Styling */
 .project {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 90%;
-    max-width: 800px;
+    align-items: flex-start; /* Aligns the year with the first line of the title */
+    justify-content: space-between;
+    width: 60vw; /* Ensures width is relative to viewport */
+    max-width: 800px; /* Prevents excessive stretching on large screens */
     margin: 20px auto;
-    text-align: center;
+    font-size: 18px;
+    word-wrap: break-word;
 }
 
+/* Project Name Styling */
 .project-name {
-    font-size: 20px;
-    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    max-width: 80%; /* Restrict title to 80% of the container */
+    display: inline-block;
+    white-space: normal; /* Allow natural text wrapping */
+    transition: color 0.3s ease;
+    flex-grow: 1;
+    text-align: left;
 }
 
+.project-name:hover {
+    color: #007BFF;
+}
+
+/* Project Date Styling */
 .project-date {
-    font-size: 16px;
+    font-weight: bold;
     color: rgba(128, 128, 128, 0.8);
-    margin-top: 5px;
+    text-align: right;
+    min-width: 60px;
+    padding-left: 10px; /* Ensures spacing from title */
 }
 
-/* Responsive Media Queries */
-@media screen and (max-width: 768px) {
-    .header--main {
-        font-size: 28px;
-        margin-top: 60px;
-    }
-
-    .header--secondary, .header--project--secondary {
-        font-size: 16px;
-    }
-
-    .project-description, .project-skills {
-        font-size: 16px;
-        width: 95%;
-    }
-
-    .cv-btn {
-        padding: 10px 20px;
-        font-size: 13px;
-    }
+.project-description {
+    width: 600px; /* Fixed width to keep it static */
+    max-width: 100%; /* Ensures responsiveness */
+    text-align: justify; /* Aligns text to both left and right */
+    margin: 0 auto; /* Centers it */
+    font-size: 18px;
+    line-height: 1.5;
+    color: black;
 }
+
+.description-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.project-skills {
+    width: 600px; /* Matches description width */
+    max-width: 100%; /* Ensures responsiveness */
+    text-align: justify; /* Aligns text to both left and right */
+    margin: 60px auto 0 auto; /* Adds spacing above */
+    font-size: 18px;
+    line-height: 1.5;
+    color: black;
+}
+
+.project-skills b {
+    font-weight: bold;
+}
+
+.about-container {
+    width: 800px; /* Keeps it aligned with other sections */
+    max-width: 100%;
+    margin: 40px auto;
+    font-size: 18px;
+    line-height: 1.6;
+    color: black;
+    text-align: justify; /* Ensures left & right alignment */
+}
+
+.quote {
+    text-align: center;
+    font-size: 16px;
+    font-style: italic;
+    margin-top: 30px;
+    color: gray;
+}
+
