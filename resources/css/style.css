@@ -1,25 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 @media (max-width: 768px) {
     body {
-        transform: scale(0.9);  /* Zoom out on mobile */
-        transform-origin: top center;
+        transform: scale(1);  /* Remove zoom-out */
     }
 
-    .header--project, 
-    .header--project--secondary, 
+    .header--project {
+        font-size: 24px;  /* Smaller title */
+    }
+
+    .header--project--secondary {
+        font-size: 14px;  /* Smaller secondary title */
+    }
+
     .project-description, 
     .project-skills, 
     .about-container {
-        max-width: 85vw;  /* Prevents text from stretching too wide */
-        padding: 0 20px;  /* Adds space on the left & right */
+        font-size: 15px;  /* Reduce text size for better readability */
+        max-width: 85vw;  /* Keeps text from stretching across full width */
+        padding: 0 20px;  /* Adds side spacing */
         margin: 0 auto;  /* Centers everything */
-        text-align: left; /* Aligns text for better readability */
+        text-align: left; /* Better readability */
+    }
+
+    .navbar a {
+        font-size: 14px;  /* Make navbar text smaller */
     }
 
     .divider {
         width: 85vw;  /* Matches new content width */
     }
 }
+
 body {
     background-color: #e9f4fc;
     text-align: center;
