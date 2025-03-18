@@ -209,7 +209,7 @@ body {
 /* Responsive Design */
 @media (max-width: 768px) {
     /* Adjust padding and max-width for text containers */
-    .header--main, .header--project, .header--secondary, .header--project--secondary, .project-description, .project-skills, .about-container {
+    .project-name, .project-date, .header--main, .header--project, .header--secondary, .header--project--secondary, .project-description, .project-skills, .about-container {
         padding: 0 20px;
         max-width: 90%;
     }
