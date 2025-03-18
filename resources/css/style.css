@@ -1,12 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
-/* Ensure spacing is maintained on smaller screens */
-@media (max-width: 768px) {
-    .about-container {
-        max-width: 90%; /* Prevents text from touching edges */
-        padding: 0 10px; /* Adds padding for better readability */
-    }
-}
 
+/* General Styles */
 body {
     background-color: #e9f4fc;
     text-align: center;
@@ -19,8 +13,7 @@ body {
     padding: 0;
 }
 
-/* HEADINGS */
-
+/* Headings */
 .header--main {
     font-weight: bold;
     font-size: 50px;
@@ -45,13 +38,10 @@ body {
     margin-top: 150px;
     margin-bottom: 5px;
     line-height: 1.2;
-    text-align: center; /* Ensures it's centered */
-    max-width: 50vw; /* Matches the width of the divider */
-    max-width: 500px; /* Prevents excessive stretching */
-    word-wrap: break-word; /* Allows breaking at appropriate points */
-    overflow-wrap: break-word; /* Ensures long words break correctly */
+    text-align: center;
+    max-width: 600px;
     margin-left: auto;
-    margin-right: auto; /* Centers within the container */
+    margin-right: auto;
 }
 
 .header--project--secondary {
@@ -63,57 +53,51 @@ body {
     line-height: 1.2;
 }
 
-/* NAVBAR */
-
+/* Navbar */
 .navbar {
     display: flex;
-    gap: 20px; /* Space between links */
-    padding: 10px 20px; /* Space around links */
+    gap: 20px;
+    padding: 10px 20px;
     position: absolute;
     top: 0;
     left: 0;
 }
 
-/* Navbar Links */
 .navbar a {
-    text-decoration: none; /* Remove default underline */
+    text-decoration: none;
     color: black;
     font-size: 18px;
     margin-top: 15px;
     margin-left: 10px;
     font-weight: bolder;
-    position: relative; /* Needed for custom underline */
+    position: relative;
     transition: color 0.3s ease;
 }
 
-/* Custom Underline Effect */
 .navbar a::after {
     content: "";
     position: absolute;
     left: 0;
-    bottom: -3px; /* Moves underline 3px below the text */
+    bottom: -3px;
     width: 100%;
-    height: 2px; /* Thickness of the underline */
-    background-color: #007BFF; /* Underline color */
-    transform: scaleX(0); /* Initially hidden */
+    height: 2px;
+    background-color: #007BFF;
+    transform: scaleX(0);
     transform-origin: center;
     transition: transform 0.3s ease;
 }
 
-/* Hover Effect */
 .navbar a:hover {
-    color: #007BFF; /* Blue text on hover */
+    color: #007BFF;
 }
 
 .navbar a:hover::after {
-    transform: scaleX(1); /* Expands underline */
+    transform: scaleX(1);
 }
 
-
-/* CV BUTTON */ 
-
+/* CV Button */
 .cv-btn {
-    appearance: none; /* Removes default button styles */
+    appearance: none;
     background-color: black;
     color: white;
     border: none;
@@ -130,37 +114,35 @@ body {
     outline: none;
 }
 
-/* DIVIDER */
-
+/* Divider */
 .divider {
     border: none;
     height: 2px;
     background-color: rgba(128, 128, 128, 0.3);
     margin: 20px auto;
-    width: 60vw; /* Matches project section width */
-    max-width: 800px; /* Prevents excessive stretching on large screens */
+    width: 60vw;
+    max-width: 800px;
 }
 
-/* Project Name Styling */
+/* Project Styling */
 .project {
     display: flex;
-    align-items: flex-start; /* Aligns the year with the first line of the title */
+    align-items: flex-start;
     justify-content: space-between;
-    width: 60vw; /* Ensures width is relative to viewport */
-    max-width: 800px; /* Prevents excessive stretching on large screens */
+    width: 60vw;
+    max-width: 800px;
     margin: 20px auto;
     font-size: 18px;
     word-wrap: break-word;
 }
 
-/* Project Name Styling */
 .project-name {
     text-decoration: none;
     color: black;
     font-weight: bold;
-    max-width: 80%; /* Restrict title to 80% of the container */
+    max-width: 80%;
     display: inline-block;
-    white-space: normal; /* Allow natural text wrapping */
+    white-space: normal;
     transition: color 0.3s ease;
     flex-grow: 1;
     text-align: left;
@@ -170,39 +152,36 @@ body {
     color: #007BFF;
 }
 
-/* Project Date Styling */
 .project-date {
     font-weight: bold;
     color: rgba(128, 128, 128, 0.8);
     text-align: right;
     min-width: 60px;
-    padding-left: 10px; /* Ensures spacing from title */
+    padding-left: 10px;
+}
+
+/* Project Description and Skills */
+.project-description, .project-skills, .about-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 .project-description {
-    width: 600px; /* Fixed width to keep it static */
-    max-width: 100%; /* Ensures responsiveness */
-    text-align: justify; /* Aligns text to both left and right */
-    margin: 0 auto; /* Centers it */
+    text-align: justify;
     font-size: 18px;
     line-height: 1.5;
     color: black;
-}
-
-.description-container {
-    display: flex;
-    justify-content: center;
-    width: 100%;
 }
 
 .project-skills {
-    width: 600px; /* Matches description width */
-    max-width: 100%; /* Ensures responsiveness */
-    text-align: justify; /* Aligns text to both left and right */
-    margin: 60px auto 0 auto; /* Adds spacing above */
+    text-align: justify;
     font-size: 18px;
     line-height: 1.5;
     color: black;
+    margin-top: 60px;
 }
 
 .project-skills b {
@@ -210,13 +189,13 @@ body {
 }
 
 .about-container {
-    width: 800px; /* Keeps it aligned with other sections */
+    width: 800px;
     max-width: 100%;
     margin: 40px auto;
     font-size: 18px;
     line-height: 1.6;
     color: black;
-    text-align: justify; /* Ensures left & right alignment */
+    text-align: justify;
 }
 
 .quote {
@@ -227,4 +206,10 @@ body {
     color: gray;
 }
 
-
+/* Responsive Design */
+@media (max-width: 768px) {
+    .project-description, .project-skills, .about-container {
+        padding: 0 15px;
+        max-width: 100%;
+    }
+}
