@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Inter:wght@300;400;600&family=Nunito:wght@300;400;600&family=Lato:wght@300;400;700&family=Open+Sans:wght@300;400;600&display=swap');
 @media (max-width: 768px) { /* Targets phones and tablets */
     body {
-        zoom: 0.75; /* Scales down the content */
+        zoom: 0.5; /* Scales down the content */
     }
 }
 
