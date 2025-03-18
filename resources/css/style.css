@@ -216,30 +216,30 @@ body {
 
     /* Smaller font sizes for mobile */
     body {
-        font-size: 14px; /* Reduced from 16px */
+        font-size: 16px; /* Reduced from 16px */
     }
 
     .header--main {
-        font-size: 36px; /* Reduced from 40px */
+        font-size: 40px; /* Reduced from 40px */
     }
 
     .header--secondary {
-        font-size: 18px; /* Reduced from 20px */
+        font-size: 20px; /* Reduced from 20px */
     }
 
     .header--project {
-        font-size: 22px; /* Reduced from 24px */
+        font-size: 24px; /* Reduced from 24px */
     }
 
     .header--project--secondary {
-        font-size: 13px; /* Reduced from 14px */
+        font-size: 14px; /* Reduced from 14px */
     }
 
     .project-description, .project-skills, .about-container {
-        font-size: 14px; /* Reduced from 16px */
+        font-size: 16px; /* Reduced from 16px */
     }
 
     .quote {
-        font-size: 12px; /* Reduced from 14px */
+        font-size: 14px; /* Reduced from 14px */
     }
 }
