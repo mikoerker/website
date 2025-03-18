@@ -1,25 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+/* Ensure spacing is maintained on smaller screens */
 @media (max-width: 768px) {
-    body {
-        transform: scale(0.9);  /* Zoom out on mobile */
-        transform-origin: top center;
-    }
-
-    .header--project, 
-    .header--project--secondary, 
-    .project-description, 
-    .project-skills, 
     .about-container {
-        max-width: 85vw;  /* Prevents text from stretching too wide */
-        padding: 0 20px;  /* Adds space on the left & right */
-        margin: 0 auto;  /* Centers everything */
-        text-align: left; /* Aligns text for better readability */
-    }
-
-    .divider {
-        width: 85vw;  /* Matches new content width */
+        max-width: 90%; /* Prevents text from touching edges */
+        padding: 0 10px; /* Adds padding for better readability */
     }
 }
+
 body {
     background-color: #e9f4fc;
     text-align: center;
